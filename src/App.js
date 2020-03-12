@@ -6,12 +6,12 @@ import TodoList from "./components/TodoList";
 
 const tasks =[
   {
-    task: 'Organize Garage',
+    name: 'Organize Garage',
     id: 1528817077286,
     completed: false
   },
   {
-    task: 'Bake Cookies',
+    name: 'Bake Cookies',
     id: 1528817084358,
     completed: false
   }
@@ -26,7 +26,7 @@ class App extends React.Component {
   }
 
   toggleCompleted = taskId => {
-    console.log("bk: index.js: App: toggleCompleted: itemId: ", taskId);
+    console.log("bk: index.js: App: toggleCompleted: taskId: ", taskId);
     this.setState({
       tasks: this.state.tasks.map(task => {
         if (task.id === taskId) {
@@ -45,7 +45,7 @@ class App extends React.Component {
       tasks: [
         ...this.state.tasks,
         {
-          task: taskName,
+          name: taskName,
           id:Date.now(),
           completed: false
         }
@@ -56,7 +56,7 @@ class App extends React.Component {
   clearCompleted = () => {
     console.log("bk: index.js: App: clearCompleted");
     this.setState({
-      tasks: this.state.tasks.filter(item => {
+      tasks: this.state.tasks.filter(task => {
         return !task.completed;
       })
     });

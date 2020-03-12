@@ -16,13 +16,13 @@ handleChanges = e => {
   // class property to submit form
   handleAddItem = e => {
     e.preventDefault();
-    this.props.addTask(this.state.taskName);
+    this.props.addItem(this.state.taskName);
   };
 
   render() {
     console.log("rendering form");
     return (
-      <form onSubmit={this.handleAddTask}>
+      <form onSubmit={this.handleAddItem}>
         {/* This is an uncontrolled component 😬 We want it to be controlled by state */}
         <input
           type="text"
