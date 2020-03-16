@@ -23,7 +23,6 @@ handleChanges = e => {
     console.log("rendering form");
     return (
       <form onSubmit={this.handleAddItem}>
-        {/* This is an uncontrolled component 😬 We want it to be controlled by state */}
         <input
           type="text"
           name="task"
